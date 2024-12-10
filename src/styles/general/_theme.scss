@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:700|Poppins:400');
+
+:root {
+    --text: #0a0c10;
+    --background: #f1f3f8;
+    --primary: #2e4166;
+    --secondary: #869fd0;
+    --accent: #375da9;
+
+    --card: rgba(46, 65, 102, 0.05);
+    --jumbotron-filter: #7c7c7c;
+}
+
+.dark-mode {
+    --text: #eff1f5;
+    --background: #07090e;
+    --primary: #99acd1;
+    --secondary: #2f4879;
+    --accent: #567cc8;
+
+    --card: rgba(153, 172, 209, 0.05);
+    --jumbotron-filter: #07090e;
+}

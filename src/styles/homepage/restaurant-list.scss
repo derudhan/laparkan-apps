@@ -1,0 +1,49 @@
+@import '../general/global.scss';
+
+.app-content-title {
+    @extend .font-heading;
+    text-transform: uppercase;
+    $font-size: 1.5rem;
+
+    font-size: $font-size;
+    line-height: 1.2;
+    padding: 1.5rem 0;
+    text-align: center;
+
+    @media (min-width: $xs) {
+        font-size: $font-size + 0.2rem;
+    }
+    @media (min-width: $sm) {
+        font-size: $font-size + 0.6rem;
+    }
+    @media (min-width: $md) {
+        font-size: $font-size + 1rem;
+    }
+    @media (min-width: $lg) {
+        font-size: $font-size + 1.4rem;
+    }
+    @media (min-width: $xl) {
+        font-size: $font-size + 1.8rem;
+    }
+}
+
+.app-daftar-restoran {
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.is-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}

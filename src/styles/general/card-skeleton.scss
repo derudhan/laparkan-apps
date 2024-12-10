@@ -1,0 +1,45 @@
+.card-skeleton {
+    background: var(--card);
+    border-radius: 16px;
+
+    width: 245px;
+    @media (min-width: 420px) {
+        width: 320px;
+    }
+    @media (min-width: 768px) {
+        width: 100%;
+    }
+
+    .image,
+    h2,
+    p {
+        background: linear-gradient(110deg, var(--card) 12%, #b1b1b1 18%, var(--card) 33%);
+        border-radius: 16px;
+        background-size: 200% 100%;
+        animation: 1.5s shine linear infinite;
+    }
+
+    .image {
+        height: 200px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    h2 {
+        height: 30px;
+    }
+
+    p {
+        height: 70px;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+}
+
+@keyframes shine {
+    to {
+        background-position-x: -200%;
+    }
+}

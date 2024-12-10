@@ -1,0 +1,32 @@
+@import './general/theme';
+@import './general/global.scss';
+
+@import './homepage/footer.scss';
+@import './general/button.scss';
+
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background: var(--accent);
+    color: var(--background);
+    padding: 10px;
+    z-index: 9999;
+    transition: 0.3s;
+    &:focus {
+        top: 0;
+    }
+}
+.app-main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

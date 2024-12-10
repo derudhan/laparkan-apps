@@ -1,0 +1,98 @@
+@import '../general/global.scss';
+
+.app-jumbotron {
+    position: relative;
+    width: 100%;
+
+    .jumbotron-image {
+        width: 100%;
+
+        @media (min-width: 1200px) {
+            min-width: 1000px;
+        }
+    }
+
+    .jumbotron-filter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background-color: var(--jumbotron-filter);
+        opacity: 0.7;
+        transition: background-color 0.3s;
+    }
+
+    .jumbotron-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+
+        color: var(--text);
+        text-transform: uppercase;
+        line-height: normal;
+        font-size: 1.2rem;
+
+        text-align: center;
+        transition: 0.3s;
+
+        .chef-icon {
+            width: 3rem;
+            height: 3rem;
+            margin: 0 auto;
+            display: block;
+            color: var(--accent);
+            transition: 0.3s;
+        }
+
+        --link-icon-translate: -20px;
+        --link-icon-opacity: 0;
+        &:hover {
+            --link-icon-translate: 0;
+            --link-icon-opacity: 1;
+            transform: translate(-50%, -55%);
+        }
+
+        .icon {
+            width: 2rem;
+            height: 2rem;
+            width: 100%;
+            text-align: center;
+            transform: translateY(var(--link-icon-translate));
+            opacity: var(--link-icon-opacity);
+            transition: all 0.3s;
+        }
+
+        .sr-only:not(:focus):not(:active) {
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+        }
+
+        .title-color-effect {
+            background: linear-gradient(120deg, var(--accent), var(--primary));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            .dark-mode {
+                background: linear-gradient(120deg, var(--primary), var(--accent));
+            }
+        }
+
+        @media (min-width: $sm) {
+            font-size: 1.8rem;
+        }
+
+        @media (min-width: $md) {
+            font-size: 2.5rem;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+$nav-list-gap: 4rem;
+$nav-list-font-size: 44px;
+
+$close-icon-size: 44px;
+
+.app-nav-drawer {
+    width: 100%;
+    height: 0;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    background-color: var(--background);
+    overflow-x: hidden;
+    transition: 0.5s;
+
+    ul {
+        width: 100%;
+        list-style: none;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $nav-list-gap;
+
+        li {
+            font-size: $nav-list-font-size;
+        }
+    }
+
+    .closeBtn {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+
+        .lucide {
+            width: $close-icon-size;
+            height: $close-icon-size;
+            color: var(--text);
+            transition: ease 0.3s;
+
+            cursor: pointer;
+
+            &:hover {
+                color: var(--accent);
+                transform: translateY(-2px);
+            }
+        }
+    }
+}
